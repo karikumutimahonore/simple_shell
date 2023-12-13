@@ -1,28 +1,28 @@
 #include "main.h"
 
 /**
- * get_builtin - builtin that pair the command in the arguments
+ * get_builtin - builtin cmd argmnt
  * @cmd: command
  * Return: pointer.
  */
 int (*get_builtin(char *cmd))(dataclif *)
 {
-	bare_b builtin[] = {
-		{ "env", bika },
-		{ "exit", sohoka_shell },
-		{ "setenv", _setbika },
-		{ "unsetenv", _unsetbika },
+	ball_b builtin[] = {
+		{ "env", ibik },
+		{ "exit", exit_shell },
+		{ "setenv", _setenv },
+		{ "unsetenv", _unsetenv },
 		{ "cd", rnd_catch },
-		{ "help", fata_ubuf },
+		{ "help", akir_ubuf },
 		{ NULL, NULL }
 	};
-	int index_i = 0;
+	int hm;
 
-	for (index_i; builtin[i].nom; index_i++)
+	for (hm = 0; builtin[hm].nom; hm++)
 	{
-		if (strcap_e(builtin[index_i].nom, cmd) == 0)
+		if (strcap_e(builtin[hm].nom, cmd) == 0)
 			break;
 	}
 
-	return (builtin[index_i].f);
+	return (builtin[hm].f);
 }
