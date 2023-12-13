@@ -21,12 +21,12 @@ int execute_command(const char *pathname, shell_t *hons)
 
 	if (pid == 0)
 	{
-		if (execve(pathname, hons->sub_command, environ) == -1)
+		if (execve(pathname, hons->other_cmd, environ) == -1)
 		{
 			if (errno == EACCES)
 			{
 				fprintf(stderr, "%s: %lu: %s\n", hons->prog_name,
-						++hons->cmd_count, strerror(errno));
+						++hons->cmd_cnt, strerror(errno));
 				return (126);
 			}
 			perror("execve");
