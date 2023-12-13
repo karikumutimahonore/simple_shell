@@ -1,6 +1,6 @@
 #include "honore.h"
 
-static int exit_code;
+static int terminate_code;
 
 /**
  * handle_alias - handles alias.
@@ -15,7 +15,7 @@ int handle_alias(alias_t **umutwe, char *hanga)
 		hanga++;
 
 	if (_strlen(hanga) == 5)
-		print_aliyases(*umutwe);
+		print_aliases(*umutwe);
 
 	else if (!_strncmp(hanga, "alias", 5))
 	{
@@ -28,7 +28,7 @@ int handle_alias(alias_t **umutwe, char *hanga)
 	else if (!_strncmp(hanga, "unalias", 7))
 		return (unalias(umutwe, hanga));
 
-	return (exit_code);
+	return (terminate_code);
 }
 
 /**
@@ -103,12 +103,12 @@ void process_non_matching(alias_t *aliyases, const char *non_matching, int end)
 		{
 			while (token != NULL)
 			{
-				exit_code = print_alias(aliyases, token);
+				terminate_code = print_alias(aliyases, token);
 				token = strtok(NULL, " ");
 			}
 		}
 		else
-			exit_code = print_alias(aliyases, token);
+			terminate_code = print_alias(aliyases, token);
 	}
 	free(dup);
 }

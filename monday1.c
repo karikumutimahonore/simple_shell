@@ -22,7 +22,7 @@ int pass_line(shell_t *hons)
 		return (-1);
 	}
 
-	for (i = 0; hons->credential[start] != NULL; i++)
+	for (start = 0; hons->credential[start] != NULL; start++)
 	{
 		hons->token = hons->credential[start];
 

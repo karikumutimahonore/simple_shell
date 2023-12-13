@@ -32,7 +32,7 @@ int main(int argc, char *argv[])
 
 		n_read = _getline(&hons->linne, &len, STDIN_FILENO);
 
-		++hons->cmd_cnt; /* keep track of the number of inputs to the shell */
+		++hons->comm_calc; /* keep track of the number of inputs to the shell */
 
 		/* check for empty prompt or if Ctrl+D was received */
 		if (n_read == 0)

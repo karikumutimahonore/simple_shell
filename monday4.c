@@ -119,7 +119,7 @@ int handle_exit(shell_t *hons, void (*cleanup)(const char *format, ...))
 	if (isalpha(*status_code) || _atoi(status_code) < 0 || *status_code == '-')
 	{
 		dprintf(STDERR_FILENO, "%s: %lu: exit: Illegal number: %s\n",
-				hons->prog_name, hons->cmd_cnt, status_code);
+				hons->prog_name, hons->comm_calc, status_code);
 		return (CMD_ERR);
 	}
 
@@ -156,10 +156,10 @@ int handle_cd(shell_t *hons)
 		{
 			if (_strspn(pathname, "-") > 2)
 				fprintf(stderr, "%s: %lu: cd: Illegal option: --\n", hons->prog_name,
-						hons->cmd_cnt);
+						hons->comm_calc);
 			else
 				fprintf(stderr, "%s: %lu: cd: can't cd to %s\n", hons->prog_name,
-						hons->cmd_cnt, pathname);
+						hons->comm_calc, pathname);
 			return (CMD_ERR);
 		}
 		if (dash)

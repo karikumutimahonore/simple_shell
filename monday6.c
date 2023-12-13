@@ -31,7 +31,7 @@ char **handle_variables(shell_t *hons)
 		}
 		else if (hons->other_cmd[i][offset + 1] == '?')
 		{
-			_itoa(hons->exit_code, result);
+			_itoa(hons->terminate_code, result);
 			safe_free(hons->other_cmd[i]);
 			hons->other_cmd[i] = _strdup(result);
 		}

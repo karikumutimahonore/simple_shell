@@ -17,7 +17,7 @@ char **_strtok(const char *str, const char *delim)
 	if (delim == NULL)
 		tmp_delim = " \t\n";
 
-	amagambo_count = get_amagambo_count(str, tmp_delim);
+	amagambo_count = get_word_count(str, tmp_delim);
 	if (amagambo_count == 0)
 		return (NULL);
 
@@ -85,12 +85,12 @@ char *_strpbrk(const char *s, const char *accept)
 size_t _strspn(const char *s, const char *accept)
 {
 	size_t len = 0;
-	int i = 0, map[256] = {0};
+	int i, map[256] = {0};
 
 	if (s == NULL || accept == NULL)
 		return (0);
 
-	for (i; accept[i] != '\0'; i++)
+	for (i = 0; accept[i] != '\0'; i++)
 		map[(unsigned char)accept[i]] = 1;
 
 	for (i = 0; s[i] != '\0'; i++)

@@ -23,7 +23,7 @@ shell_t *init_shell(void)
 	msh->commands = NULL;
 	msh->credential = NULL;
 	msh->token = NULL;
-	msh->cmd_cnt = 0;
+	msh->comm_calc = 0;
 	msh->terminate_code = 0;
 
 	return (msh);

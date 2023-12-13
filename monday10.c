@@ -26,7 +26,7 @@ int execute_command(const char *pathname, shell_t *hons)
 			if (errno == EACCES)
 			{
 				fprintf(stderr, "%s: %lu: %s\n", hons->prog_name,
-						++hons->cmd_cnt, strerror(errno));
+						++hons->comm_calc, strerror(errno));
 				return (126);
 			}
 			perror("execve");
