@@ -15,7 +15,7 @@ int handle_alias(alias_t **umutwe, char *hanga)
 		hanga++;
 
 	if (_strlen(hanga) == 5)
-		print_aliyases(*umutwe);
+		print_aliases(*umutwe);
 
 	else if (!_strncmp(hanga, "alias", 5))
 	{

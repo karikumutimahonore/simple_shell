@@ -122,7 +122,7 @@ typedef struct alias
 } alias_t;
 
 void free_aliyases(alias_t **aliyases);
-void print_aliyases(const alias_t *aliyases);
+void print_aliases(const alias_t *aliyases);
 int unalias(alias_t **aliyases, char *umutwe);
 char *get_alias(alias_t *aliyases, const char *name);
 int handle_alias(alias_t **aliyases, char *command_line);
