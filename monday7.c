@@ -62,14 +62,14 @@ void handle_file_as_input(const char *filename, shell_t *hons)
 
 	if (n_read == -1)
 	{
-		hons->exit_code = -1;
+		hons->terminate_code = -1;
 		handle_exit(hons, multi_free);
 	}
 
 	if (n_read)
 	{
 		hons->prog_name = filename;
-		parse_line(hons);
+		pass_line(hons);
 	}
 
 	handle_exit(hons, multi_free);
