@@ -30,7 +30,7 @@ ssize_t _getline(char **str_buff, size_t *num, int file_disc)
 			*str_buff = _realloc(*str_buff, Summ_read, buffer_size);
 			if (*str_buff == NULL)
 				return (-1);
-			*n = Summ_read;
+			*num = Summ_read;
 		}
 		if (Summ_read && (*str_buff)[Summ_read - 1] == '\n')
 		{
