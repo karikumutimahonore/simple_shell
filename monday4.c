@@ -105,13 +105,13 @@ int _unsetenv(const char *name)
  */
 int handle_exit(shell_t *hons, void (*cleanup)(const char *format, ...))
 {
-	const char *status_code = (hons->sub_command) ? hons->sub_command[1] : NULL;
+	const char *status_code = (hons->other_cmd) ? hons->other_cmd[1] : NULL;
 	int terminate_code = hons->terminate_code;
 
 	if (status_code == NULL)
 	{
-		cleanup("spattt", hons->line, &hons->path_list, &hons->aliyases,
-				&hons->commands, &hons->sub_command, &hons->credential);
+		cleanup("spattt", hons->linne, &hons->path_list, &hons->aliyases,
+				&hons->commands, &hons->other_cmd, &hons->credential);
 		safe_free(hons);
 		exit(terminate_code);
 	}
@@ -119,13 +119,13 @@ int handle_exit(shell_t *hons, void (*cleanup)(const char *format, ...))
 	if (isalpha(*status_code) || _atoi(status_code) < 0 || *status_code == '-')
 	{
 		dprintf(STDERR_FILENO, "%s: %lu: exit: Illegal number: %s\n",
-				hons->prog_name, hons->cmd_count, status_code);
+				hons->prog_name, hons->cmd_cnt, status_code);
 		return (CMD_ERR);
 	}
 
 	terminate_code = _atoi(status_code);
-	cleanup("spattt", hons->line, &hons->path_list, &hons->aliyases,
-			&hons->commands, &hons->sub_command, &hons->credential);
+	cleanup("spattt", hons->linne, &hons->path_list, &hons->aliyases,
+			&hons->commands, &hons->other_cmd, &hons->credential);
 	safe_free(hons);
 	exit(terminate_code);
 }
@@ -139,7 +139,7 @@ int handle_exit(shell_t *hons, void (*cleanup)(const char *format, ...))
 int handle_cd(shell_t *hons)
 {
 	char path[PATH_SIZE], pwd[BUFF_SIZE];
-	const char *pathname = hons->sub_command[1];
+	const char *pathname = hons->other_cmd[1];
 	char *home = _getenv("HOME"), *oldpath = _getenv("OLDPWD");
 
 	getcwd(pwd, BUFF_SIZE);
@@ -156,10 +156,10 @@ int handle_cd(shell_t *hons)
 		{
 			if (_strspn(pathname, "-") > 2)
 				fprintf(stderr, "%s: %lu: cd: Illegal option: --\n", hons->prog_name,
-						hons->cmd_count);
+						hons->cmd_cnt);
 			else
 				fprintf(stderr, "%s: %lu: cd: can't cd to %s\n", hons->prog_name,
-						hons->cmd_count, pathname);
+						hons->cmd_cnt, pathname);
 			return (CMD_ERR);
 		}
 		if (dash)
