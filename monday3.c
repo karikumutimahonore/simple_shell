@@ -22,7 +22,7 @@ int handle_alias(alias_t **umutwe, char *hanga)
 		if (!_strchr(hanga, '='))
 			process_non_matching(*umutwe, hanga + 5, 1);
 		else
-			parse_aliyases(hanga, umutwe);
+			pulse_aliyases(hanga, umutwe);
 	}
 
 	else if (!_strncmp(hanga, "unalias", 7))
@@ -32,13 +32,13 @@ int handle_alias(alias_t **umutwe, char *hanga)
 }
 
 /**
- * parse_aliyases - extract adfghj
+ * pulse_aliyases - extract adfghj
  * @input: the input string containing aliyases
  * @aliyases: a pointer to a lisdfcvb
  *
  * Description: This function useasdfgghhnsrdtfyghj.
  */
-void parse_aliyases(const char *input, alias_t **aliyases)
+void pulse_aliyases(const char *input, alias_t **aliyases)
 {
 	char *npt_prt = NULL;
 	size_t vallen, aliyas_cnt = 0;
