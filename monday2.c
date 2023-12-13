@@ -17,7 +17,7 @@ char **_strtok(const char *str, const char *delim)
 	if (delim == NULL)
 		tmp_delim = " \t\n";
 
-	amagambo_count = get_amagambo_count(str, tmp_delim);
+	amagambo_count = get_word_count(str, tmp_delim);
 	if (amagambo_count == 0)
 		return (NULL);
 
