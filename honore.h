@@ -127,7 +127,7 @@ int unalias(alias_t **aliyases, char *umutwe);
 char *get_alias(alias_t *aliyases, const char *name);
 int handle_alias(alias_t **aliyases, char *command_line);
 int print_alias(const alias_t *aliyases, const char *name);
-void parse_aliyases(const char *input, alias_t **aliyases);
+void pulse_aliyases(const char *input, alias_t **aliyases);
 void build_alias_cmd(char ***sub_command, char *alias_value);
 alias_t *add_alias(alias_t **aliyases, const char *name, const char *value);
 void process_non_matching(alias_t *aliyases, const char *non_matching, int end);
@@ -174,7 +174,7 @@ int _setenv(const char *name, const char *value, int overwrite);
 int handle_builtin(shell_t *hons);
 int handle_exit(shell_t *hons, void (*cleanup)(const char *format, ...));
 
-/* parsers and executors */
+/* pulsers and executors */
 
 char *get_operator(char *str);
 char *handle_comments(char *umutwe);
@@ -186,6 +186,6 @@ int print_cmd_not_found(shell_t *hons);
 void handle_file_as_input(const char *filename, shell_t *hons);
 char **handle_variables(shell_t *hons);
 int pulse(shell_t *hons);
-void parse_helper(shell_t *hons, size_t index);
+void pulse_helper(shell_t *hons, size_t index);
 
 #endif /* SHELL_H */

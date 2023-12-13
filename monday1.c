@@ -132,12 +132,12 @@ void pulse_helper(shell_t *hons, size_t index)
 	if (!_strcmp(hons->other_cmd[0], "alias") ||
 			!_strcmp(hons->other_cmd[0], "unalias"))
 	{
-		hons->terminate_code = handle_alias(&hons->aliases, hons->commands[index]);
+		hons->terminate_code = handle_alias(&hons->aliyases, hons->commands[index]);
 		free_str(&hons->other_cmd);
 		return;
 	}
 
-	alias_value = get_alias(hons->aliases, hons->other_cmd[0]);
+	alias_value = get_alias(hons->aliyases, hons->other_cmd[0]);
 	if (alias_value != NULL)
 	{
 		build_alias_cmd(&hons->other_cmd, alias_value);
