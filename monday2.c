@@ -78,7 +78,7 @@ char *_which(char *cmd, char **envaribale)
  * @datash: data structure
  * Return: 0.
  */
-int is_executable(datacliff *datash)
+int is_executable(dataclif *datash)
 {
 	struct stat ct;
 	int i;
@@ -124,7 +124,7 @@ int is_executable(datacliff *datash)
  * @datash: DS.
  * Return: 1.
  */
-int check_error_cmd(char *dir, datacliff *datash)
+int check_error_cmd(char *dir, dataclif *datash)
 {
 	if (dir == NULL)
 	{
@@ -160,7 +160,7 @@ int check_error_cmd(char *dir, datacliff *datash)
  * @datash: data relevant.
  * Return: 1.
  */
-int cmd_exec(datacliff *datash)
+int cmd_exec(dataclif *datash)
 {
 	pid_t pd;
 	pid_t sstr;

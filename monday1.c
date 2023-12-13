@@ -6,7 +6,7 @@
  * @pigsh: data relevant
  * Return: 1.
  */
-int rnd_catch(datacliff *pigsh)
+int rnd_catch(dataclif *pigsh)
 {
 	char *tirmnl;
 	int takken, wrttn, froky;

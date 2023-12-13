@@ -6,7 +6,7 @@
  * @datash: data relv
  * Return: 0.
  */
-int exit_shell(datacliff *datash)
+int exit_shell(dataclif *datash)
 {
 	unsigned int hstts;
 	int is_dgt;

@@ -6,7 +6,7 @@
  * @cat123: err value
  * Return: err
  */
-int get_feel_error2(datacliff *pigsh, int cat123)
+int get_feel_error2(dataclif *pigsh, int cat123)
 {
 	char *floor;
 

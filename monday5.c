@@ -10,7 +10,7 @@
  * @line_cnt: counter lines
  * Return: err.
  */
-char *concat_error_message(datacliff *rndsh, char *ubutumwa, char *err,
+char *concat_error_message(dataclif *rndsh, char *ubutumwa, char *err,
 		char *line_cnt)
 {
 	char *illegal_flag;
@@ -45,7 +45,7 @@ char *concat_error_message(datacliff *rndsh, char *ubutumwa, char *err,
  * @rndsh: data relevant.
  * Return: Err.
  */
-char *get_cd_error_message(datacliff *rndsh)
+char *get_cd_error_message(dataclif *rndsh)
 {
 	int longeli, len_id;
 	char *err, *line_cnt, *ubutumwa;
@@ -85,7 +85,7 @@ char *get_cd_error_message(datacliff *rndsh)
  * @rndsh: data relevant.
  * Return: Err.
  */
-char *get_not_found_error(datacliff *rndsh)
+char *get_not_found_error(dataclif *rndsh)
 {
 	int longeli;
 	char *err;
@@ -118,7 +118,7 @@ char *get_not_found_error(datacliff *rndsh)
  *
  * Return: Error message
  */
-char *get_exit_shell_error(datacliff *rndsh)
+char *get_exit_shell_error(dataclif *rndsh)
 {
 	int longeli;
 	char *err;

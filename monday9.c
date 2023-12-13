@@ -5,7 +5,7 @@
  * @cmd: command
  * Return: pointer.
  */
-int (*get_builtin(char *cmd))(datacliff *)
+int (*get_builtin(char *cmd))(dataclif *)
 {
 	bare_b builtin[] = {
 		{ "env", bika },

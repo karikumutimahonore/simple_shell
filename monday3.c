@@ -99,7 +99,7 @@ int econ_char(char *andika, int *inshinga)
  * @cool: to control msg error
  * Return: no return
  */
-void erakan_syntax_ikos(datacliff *rndsh, char *andika, int inshinga, int cool)
+void erakan_syntax_ikos(dataclif *rndsh, char *andika, int inshinga, int cool)
 {
 	char *holly, *holly2, *holly3, *kacyiru, *determine;
 	int ubuntu;
@@ -151,7 +151,7 @@ void erakan_syntax_ikos(datacliff *rndsh, char *andika, int inshinga, int cool)
  * @andika: input string
  * Return: 1 if there is an error. 0 in other case
  */
-int syntax_error_check(datacliff *rndsh, char *andika)
+int syntax_error_check(dataclif *rndsh, char *andika)
 {
 	int monday = 0;
 	int gym_char = 0;

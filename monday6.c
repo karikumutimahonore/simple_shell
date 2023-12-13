@@ -5,7 +5,7 @@
  * @datash: Relevant data
  * Return: Error message.
  */
-char *generate_env_error(datacliff *datash)
+char *generate_env_error(dataclif *datash)
 {
 	int longeli;
 	char *err;
@@ -41,7 +41,7 @@ char *generate_env_error(datacliff *datash)
  * @datash: Relevant data
  * Return: Error message
  */
-char *generate_path_126_error(datacliff *datash)
+char *generate_path_126_error(dataclif *datash)
 {
 	int longeli;
 	char *line_cnt;

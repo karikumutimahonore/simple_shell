@@ -6,9 +6,9 @@
  * @rndsh: data relevant
  * Return: 1.
  */
-int iher_umur(datacliff *rndsh)
+int iher_umur(dataclif *rndsh)
 {
-	int (*guruka)(datacliff *rndsh);
+	int (*guruka)(dataclif *rndsh);
 
 	if (rndsh->tkncl[0] == NULL)
 		return (1);

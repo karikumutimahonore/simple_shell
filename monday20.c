@@ -33,7 +33,7 @@ char *copy_info(char *name, char *value)
  * @datash: ds.
  * Return: NULL.
  */
-void set_env(char *name, char *value, datacliff *datash)
+void set_env(char *name, char *value, dataclif *datash)
 {
 	int i;
 	char *val_env, *nm_env;
@@ -63,7 +63,7 @@ void set_env(char *name, char *value, datacliff *datash)
  *
  * Return: 1.
  */
-int _setenv(datacliff *datash)
+int _setenv(dataclif *datash)
 {
 
 	if (datash->tkncl[1] == NULL || datash->tkncl[2] == NULL)
@@ -84,7 +84,7 @@ int _setenv(datacliff *datash)
  * 
  * Return: 1.
  */
-int _unsetenv(datacliff *datash)
+int _unsetenv(dataclif *datash)
 {
 	char **reallocenvaribale;
 	char *val_env, *nm_env;
