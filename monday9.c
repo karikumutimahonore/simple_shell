@@ -17,14 +17,14 @@ shell_t *init_shell(void)
 	}
 
 	msh->path_list = NULL;
-	msh->aliases = NULL;
-	msh->line = NULL;
-	msh->sub_command = NULL;
+	msh->aliyases = NULL;
+	msh->linne = NULL;
+	msh->other_cmd = NULL;
 	msh->commands = NULL;
-	msh->tokens = NULL;
+	msh->credential = NULL;
 	msh->token = NULL;
-	msh->cmd_count = 0;
-	msh->exit_code = 0;
+	msh->cmd_cnt = 0;
+	msh->terminate_code = 0;
 
 	return (msh);
 }
